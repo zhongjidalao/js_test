@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js+dom编程的艺术</title>
+    <style>
+        p{
+            color:yellow;
+            font-family: "Adobe 楷体 Std R",sans-serif;
+            font-size:1.2em;
+        }
+        body{
+            color: white;
+            background-color: black;
+        }
+        #purchases{
+            border:1px solid white;
+            background-color: #333;
+            color:#ccc;
+            padding:1em;
+        }
+        #purchases li{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>What to buy</h1>
+    <p title="a gentle reminder">Dont`t forget to buy this stuff.</p>
+    <ul id="purchases">
+        <li>A tin of beans</li>
+        <li>Cheese</li>
+        <li>Milk</li>
+    </ul>
+    <script>
+//        alert(typeof document.getElementById("purchases"));
+//        alert(document.getElementsByTagName("li").length);
+        var items = document.getElementsByTagName("li");
+        for(var i=0;i < items.length;i++){
+            alert(typeof items[i]);
+        }
+
+
+    </script>
+</body>
+</html>
