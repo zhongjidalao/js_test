@@ -1,0 +1,1 @@
+document.write("您的电脑支持js脚本！");

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>prompt</title>
+</head>
+<body>
+
+    <script>
+        function disp_prompt(){
+            var name = prompt("请输入您的名字");
+            if (name != null && name != ""){
+                document.write("您好！" + name + "今天过得怎么样？");
+            }
+        }
+    </script>
+    <input type="button" onclick="disp_prompt()" value="显示提示框">
+
+</body>
+</html>

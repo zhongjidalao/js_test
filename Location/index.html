@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Location</title>
+</head>
+<body>
+
+    <script>
+        document.write(location.href + "<br/>");
+        document.write(location.pathname + "<br/>");
+
+        function newDoc(){
+            window.location.assign("http://www.w3school.com.cn");
+        }
+        function goBack(){
+            window.history.back();
+        }
+        function goForward(){
+            window.history.forward();
+        }
+    </script>
+
+    <input type="button" value="加载新文档" onclick="newDoc()"><br/>
+    <input type="button" value="Back" onclick="goBack()"><br/>
+    <input type="button" value="Forward" onclick="goForward()">
+
+</body>
+</html>

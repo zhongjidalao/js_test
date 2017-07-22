@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js拖拽</title>
+    <style>
+        div{
+            border: dashed 1px;
+            margin:0 10px 5px;
+            padding: 10px;
+            width: 400px;
+            height:200px;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <p>图片源</p>
+        <img src="images/01.jpg" id="img1" draggable="true"/>
+        <img src="images/02.jpg" id="img2" draggable="true"/>
+        <img src="images/03.jpg" id="img3" draggable="true"/>
+    </div>
+    <div id="d2">
+        <p>拖动目的地</p>
+    </div>
+</body>
+</html>
+<script>
+    var imglist = document.getElementsByTagName('img');
+    for(var i = 0;i < 3;i++){
+        imglist[i].ondragstart = function(event){
+            event.dataTransfer.setData('text',event.target.id);
+        }
+    }
+
+    var div = document.getElementById("d2");
+    div.ondragover = function(event){
+        event.preventDefault();
+    };
+
+    div.ondrop = function(event){
+        var id = event.dataTransfer.getData('text');
+        var img = document.getElementById(id);
+        this.appendChild(img);
+    }
+</script>

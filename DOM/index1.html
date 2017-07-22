@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>DOM</title>
+</head>
+<body>
+
+<!-- <p id="p1">Hello Word!</p> -->
+<!-- <p id="p2">Hello JS!</p>
+<button type="button" onclick="document.getElementById('p2').style.color='red'">
+	点击这里
+</button> -->
+
+<!-- <h1 onclick="this.innerHTML='谢谢'">请点击这里</h1> -->
+
+<button onclick="displayDate()">点击这里</button>
+
+<script type="text/javascript">
+
+function displayDate(){
+	document.getElementById('demo').innerHTML=Date();
+}
+
+	// document.write(Date());
+	// document.getElementById("p1").innerHTML="NEW text!";
+	// document.getElementById("p1").style.color="blue";
+
+	// function changetext(id){
+	// 	id.innerHTML='谢谢';
+	// }
+
+</script>
+
+<p id="demo"></p>
+
+<!-- <h1 onclick="changetext(this)">请点击这里</h1> -->
+
+</body>
+</html>

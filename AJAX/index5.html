@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX,php和数据库</title>
+    <script>
+        var xmlhttp;
+        function showSite(str){
+            if(str == ""){
+                document.getElementById("txtHint").innerHTML="";
+                return;
+            }
+            xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange=function(){
+                if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+                    document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+                }
+            }
+            xmlhttp.open("GET","getsite_mysql.php?q="+str,true);
+            xmlhttp.send();
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <select name="users" onchange="showSite(this.value)">
+            <option value="">选择一个网站:</option>
+            <option value="1">Google</option>
+            <option value="2">淘宝</option>
+            <option value="3">菜鸟教程</option>
+            <option value="4">微博</option>
+            <option value="5">Facebook</option>
+        </select>
+    </form>
+    <br>
+    <div id="txtHint"><b>网站信息显示在这里......</b></div>
+</body>
+</html>

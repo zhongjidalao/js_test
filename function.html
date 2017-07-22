@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>函数练习</title>
+	<script type="text/javascript">
+	// 		function abs(x) {
+	//     if (typeof x !== 'number') {
+	//         throw 'Not a number';
+	//     }
+	//     if (x >= 0) {
+	//         return x;
+	//     } else {
+	//         return -x;
+	//     }
+	// }
+			function getAge() {
+		    var y = new Date().getFullYear();
+		    return y - this.birth;
+			}
+
+			var xiaoming = {
+			    name: '小明',
+			    birth: 1990,
+			    age: getAge
+			};
+
+			alert(xiaoming.age()); // 25, 正常结果
+			alert(getAge()); // NaN
+	</script>
+</head>
+<body>
+
+</body>
+</html>

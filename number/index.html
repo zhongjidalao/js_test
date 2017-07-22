@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数字</title>
+</head>
+<body>
+
+    <p id="demo"></p>
+    <!--<button onclick="window.moveTo()" type="button">按钮</button>-->
+
+    <script>
+//        var mycars = new Array();
+//        mycars[0] = "123";
+//        mycars[1] = "456";
+//        mycars[2] = "789";
+//        for(i = 0;i < mycars.length;i++){
+//            document.write(mycars[i] + "<br/>")
+//        }
+//        for(var i in mycars){
+//            document.write(mycars[i] + "<br/>");
+//        }
+
+        //组合两个数组
+//        var arr = new Array(3);
+//        arr[0] = "1";
+//        arr[1] = "2";
+//        arr[2] = "3";
+//
+//        var arr2 = new Array(3);
+//        arr2[0] = "1";
+//        arr2[1] = "2";
+//        arr2[2] = "3";
+//
+//        document.write(arr.concat(arr2));
+
+        //用join方法将数组所有元素组成一个字符串
+//        var arr = new Array(3);
+//        arr[0] = "1";
+//        arr[1] = "2";
+//        arr[2] = "3";
+//        document.write(arr.join());
+//        document.write("<br/>");
+//        document.write(arr.join("#"));
+        //round四舍五入
+//        document.write(Math.round(0.60) + "<br/>");
+//        document.write(Math.round(0.50) + "<br/>");
+//        document.write(Math.round(0.49) + "<br/>");
+//        document.write(Math.round(-4.49) + "<br/>");
+        //随机生成0到1之间的数字
+//        document.write(Math.random());
+        //计算窗口长宽
+        var w = window.innerWidth
+        || document.documentElement.clientWidth
+        || document.body.clientWidth;
+
+        var h = window.innerHeight
+        || document.documentElement.clientHeight
+        || document.body.clientHeight;
+
+        x = document.getElementById("demo");
+        x.innerHTML = "浏览器内部窗口宽度：" + w + ",高度" + h + "。";
+
+
+
+    </script>
+
+</body>
+</html>
